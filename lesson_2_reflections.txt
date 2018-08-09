@@ -5,3 +5,22 @@ What happens when you initialize a repository? Why do you need to do it?
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 	- the staging area contains the files you intend to add to the repository
 	- this allows you to choose which files you want to commit and in what order
+
+How can you use the staging area to make sure you have one commit per logical change?
+	- having the staging area means that you can split the changes in your working directory into as many commits as you like
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+	- branches allow us to try out experimental changes which we are not sure we want to be integrated into production code yet, without breaking or altering the production code
+	- the tip of the master branch can just always be your production code and be maintained as usual 
+	- making such experimental changes on a separate branch means that the production code can still be managed as usual and you can work on your experimental branch in stages committing small changes as you go without disturbing the master (production code) branch or its development or adding additional overhead in managing commit history (as it would if we used a linear approach)
+
+How do the diagrams help you visualize the branch structure?
+	- Diagrams allow us to more easily understand the graph structure of commits, in particular they show which branches contain which commits
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+	- a merge commit
+	- the diagram makes it possible to see which commits relate to which branch and the changes they introduced so we can work out which commits we want to compare if we want to find the code that was responsible for a given change
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+	- Pro: Can save you time
+	- Con: Can result in broken code which has to be tracked down by doing diffs
