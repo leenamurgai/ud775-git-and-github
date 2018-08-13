@@ -21,4 +21,3 @@ When would you want to make changes in a separate branch rather than directly in
 	- You always want to make changes in a separate branch if there is more than one person working on a project, this allows you to make pull requests and get feedback on your changes from other contributors
 	- The master branch would usually contain the production code which one does not want to break
 	- It's tempting to make changes directly on master because linear commit histories are easier to read and understand but, Git has tools (rebase) for fixing this
-
